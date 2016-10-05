@@ -11,6 +11,7 @@ My project aims to:
 - Minimise actual coding via maximum deployment of existing open-source components. 
 - Provide system documentation
 - Address and Implement concepts such as:
+    
     - Authentication
     - Authorisation
     - Security
@@ -20,6 +21,10 @@ My project aims to:
     - Backup
     - Disaster Recovery
     - Scalability
+    - Productivity
+    - Automated testing
+    - Continuous Intergration
+    - Continuous Delivery
 
 All steps are reported in the style of how-tos, observations, recommendations on strengths and weaknesses of choices made. Currently this project is using this GitHub site as a base repositry.
 
