@@ -88,14 +88,74 @@ The reasoning for this is that it is always impossible to speculate how the fina
 
 ##Method & Work Plan
 
+
+
 ###How will you use the technologies and resources to achieve your aims?
 
-A great deal of trial and error regarding the project setup’s HOW-TO will be applied, and this will give insight into their connection with the cloud-based resources. I will use these in an iterative fashion, examining how each part and attempt at the setup process will affect the database and its linkage with the website.
+A level of trial and error regarding the project setup’s HOW-TO will be applied, and this will give insight into their connection with the cloud-based resources. I will use these in an iterative fashion, examining how each part and attempt at the setup process will affect the database and its linkage with the website.
+
+I will focus on an Amazon (Free Tier) virtual machine providing these functionalities and in particular the optimal / custom alterations of the machine's OS' specifications such as RAM, Hard Disk space (as well as the procedure of adding an extra virtual drive known as an Elastic Block Store (EBS) to the virtual machine and so on.
 
 ###Show the major phases of the project, milestones and deliverables. 
+
+
+
+
+
+
+
+Investigation Phase
+
+•	30th September : Verification of Amazon "Free Tier" account including creation of and access to a virtual linux server instance and progressive documentation 
+•	14th October : Proposal Due
+
+Skeletal Phase
+
+•	31st October : Database technologies evaluated, skeletal database established 
+•	30th November : Programming technologies evaluated, initial screens implemented
+•	16th December : Early Prototype Demo Presentation
+•	31st December : Final technical direction in place
+
+Construction Phase
+
+•	31st January : Body of code construction implemented
+•	28th February : Review and re-evaluation of technical options and re-implementation where necessary, essential functionality complete
+
+Finalisation Phase
+
+• 31st March : Compilation of all screenshots and explanations into report
+•	24th April : Final Report Due
+•	30th April : Final presentation ready
+•	5th May : Viva Presentation
+
+DELIVERABLES:
+
+•	Running cloud-based services
+•	Collection of specific HOW-TOs including screenshots
+•	Explanation of Components
+•	Design Document
+•	Discussion of functionality achieved
+•	Observations
+
+
 ###Consider major risks and contingencies.
+
+RISKS AND CONTINGENCIES:
+
+Risks
+
+1: Given that I do not have a high level of expertise and experience as a programmer, it may not be possible to complete all of the functionality that would make Uni-Hood a real-world production system. While I will attempt to implement whatever useful functionality I can, I do not see this as a major issue because my goal is to investigate and report on how zero or low-cost components can be assembled to allow this type of project to proceed.
+
+2: Some of the chosen components eg. Javascript libraries, Database libraries may turn out to be bad choices. This would obviously affect how much functionality I can deliver. The contingency here will be that in the evaluation phase, I will try to identify better choices and at least demonstrate that the short-comings of the initially chosen option can be resolved.
+
 ###Generate a schedule using a Gantt chart or similar. 
+
+
+
 ###Appropriate methods, Feasible & Complete
+
+
+
 ###Discussion regarding Ethics aspects, as well as data protection and safety relating to the project
 
 ##Intellectual Property Rights / Demonstrations / Access to Code
@@ -124,7 +184,6 @@ Extra Notes:
 
 All steps are reported in the style of a massive "how-to" document, consisting of observations, recommendations on strengths and weaknesses of choices made. Currently this project is using this GitHub site as a base repositry.
 
-I would like for my project to focus on an Amazon (Free Tier) virtual machine providing these functionalities and in particular the optimal / custom alterations of the machine's OS' specifications such as RAM, Hard Disk space (as well as the procedure of adding an extra virtual drive known as an Elastic Block Store (EBS) to the virtual machine and so on.
 
 In terms of the actual business application to be modelled there is scope for this to change at this early stage, however the current construction project of a University E-Learning system will be the basis for now.
 
