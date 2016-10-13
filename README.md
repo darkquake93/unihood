@@ -73,9 +73,8 @@ Some of these deliverables will be self-contained discussions of:
 *	Continuous Delivery
 *	Continuity of Service
 * Domain Name Management
- 
-##Technologies & Resources
 
+##Technologies & Resources
 ###Major resources required
 
 *	Online documentation pages for Amazon AWS, MySql and other Software resources
@@ -179,10 +178,4 @@ A feature of my method and an illustration of the modern approach to this type o
 
 ##Intellectual Property Rights / Access to Code
 
-All of my own work and code will itself be Open-Source and visible to any GitHub user, and I will not be duplicating any similar work, hence I do not belive there are any issues regarding intellectual property rights. I am allowing my work to be publicly available and freely forkable by these users, with no limits in place such as freedom of distribution.
-
-
-
-
-
-
+All of my own work and code will itself be Open-Source and visible to any GitHub user, and I will not be duplicating any similar work, hence I do not belive there are any issues regarding intellectual property rights. As is the convention with GitHub projects, I am allowing my work to be publicly available and freely forkable by these users, with no limits in place such as freedom of distribution.
