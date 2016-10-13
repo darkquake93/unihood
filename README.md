@@ -11,33 +11,40 @@ To achieve the above aims, I have chosen to build a system called “UniHood” 
 
 ##Background
 
-###What stakeholders and topics are concerned?  
+###Stakeholders
 
 It’s important to recognise that the primary audience for this report is not the community of users of UniHood, but it is rather any organisations or individuals who are interested to see how a complete web application system can be assembled with minimum cost and effort using open-source and cloud-based resources as far as possible. 
 
-###What problem will you address?
+###Problem outline
 
 There is a wide range of new tools which are becoming available, and one characteristic of the open-source environment is that each tool has a different owner, therefore there are very few resources that can guide how to combine these tools. This report attempts to provide at least one such guideline.
 
-###Why is the project important? 
+###Importance of Project
 
 This work is particularly important given that the huge diversity of Open-Source components now available makes it extremely difficult for many students and individuals to get started with building a system such as UniHood. This project will help them begin to realise the cost-savings that are being achieved via cloud-based computing. 
 
-###What are the benefits to the stakeholders?  
+###Benefits to the stakeholders 
 
 Stakeholders should be able to use these instructions to build a completely different application. Many individuals and organisations would find the HOW-TO deliverables of this project extremely valuable because of the significant time-saving if they want to start a project using similar tools.
 
-###How does it relate to previous work and existing knowledge?
+###Relation to previous work and existing knowledge
 
 There is a long tradition of “HOW-TOs” in the open-source community, and some of these may have similar goals, however the range of available web-building tools and resources (such as Amazon AWS Free Tier and Google Single Sign-On) is evolving so rapidly that one might generate the same report in 10 months’ time and recommend better tools in it. 
 
 ##Aim and objectives 
 
-###What will the project deliver? 
+###Primary Deliverables
 
-The principle deliverable is a collection of HOW-TOs, where each task is one of the important steps required to build the system. A secondary deliverable will be the UniHood system operating as a live public-facing website.
+The primary deliverables are:
 
-###Are there intermediate or enabling deliverables?
+*	Running cloud-based services, ie. the UniHood system operating as a live public-facing website
+*	Collection of specific HOW-TOs including screenshots
+*	Explanation of Components
+*	Design Document
+*	Discussion of functionality achieved
+*	Observations
+
+###Intermediate Deliverables
 
 There are many intermediate deliverables, each of which is self-contained and may be of value to many different types of projects.
 Some of these deliverables will be self-contained discussions of:
@@ -60,51 +67,50 @@ Some of these deliverables will be self-contained discussions of:
  
 ##Technologies & Resources
 
-###List the major resources required.  
+###Major resources required
 
-*	Amazon AWS, MySql and other Online Documentation resources
+*	Online documentation pages for Amazon AWS, MySql and other Software resources
+* Forums and discussion sites such as StackOverflow
+* Client-side PC workstation(s)
 
-###What technologies are you going to use?
+###Technologies Utilised
 
-*	For Cloud-Computing resources I expect to use various Amazon AWS Resources such as:
-EC2 – Elastic Compute Cloud, dedicated to managing Amazon Virtual Machines.
-S3 - Simple Storage Service, allows upload and download of very large files
-EBS – Elastic Block Storage, mainly used for adding extra drives to currently running Virtual Machine instances.
-- Elastic IPs – A concept in which static IPs are able to be assigned to an Amazon Account and because of their “elasticity”, provide a means of mapping this same IP straight to another instance when the previously IP assigned instance fails.
+For Cloud-Computing resources I expect to use various Amazon AWS Resources such as:
+* EC2 – Elastic Compute Cloud, dedicated to managing Amazon Virtual Machines.
+* S3 - Simple Storage Service, allows upload and download of very large files
+* EBS – Elastic Block Storage, mainly used for adding extra drives to currently running Virtual Machine instances.
+* Elastic IPs – A concept in which static IPs are able to be assigned to an Amazon Account and because of their “elasticity”, provide a means of mapping this same IP straight to another instance when the previously IP assigned instance fails.
 
-Ultimately, Amazon offers a “Free Tier” service which allows these resources to be used for free or very low-cost during the first year.
+Amazon offers a “Free Tier” service which allows these above resources to be used for free or very low-cost during the first year.
 
+Additional resources include:
 *	GitHub for Source Control and as a Cloud-Based repository of project documentation. This is a free service for Open-Source project work.
 *	MySQL for database back-end
 *	PuTTY as an SSH client
 *	Programming language; expecting at this stage to review and select a suitable framework based on one of PHP, Python, Ruby or Perl.
 *	HTML5 / CSS / Javascript for browser-side programming
 
-###Where will your data come from?
+###Data Sources
 
 Sample test data will have to be improvised according to the evolution of the project.
-
-###Reasons clear? Alternatives mentioned?
-
-The reasoning for this is that it is always impossible to speculate how the final database structure will come together, so as it evolves with the project so will the test data. No alternatives for the data source will be discussed nor will they be necessary; although this is a practical project it is also an Open Source one as stated earlier, which means the data cannot be limited to just one organisation (in this case Kingston University).
+The reasoning for this is that it is always impossible to speculate how the final database structure will come together, so as it evolves with the project so will the test data. No alternatives for the test data will be discussed nor will they be necessary; although this is a practical project it is also an Open Source one as stated earlier, which means the data cannot be limited to just one organisation (in this case Kingston University).
 
 ##Method & Work Plan
 
-I have already noted above some of the technologies I have proposed to use, but an important aspect of this project is to survey and in some cases trail some alternatives to these and the additional components which will help me put a system together with minimal coding. Because of this requirement, I propose an unusual approach compared with the traditional structured methodologies; 
+I have already noted above some of the technologies I have proposed to use, but an important aspect of this project is to survey and in some cases trail some alternatives to these and the additional components which will help me put a system together with minimal coding. Because of this requirement, I propose an unusual approach compared with the traditional structured methodologies.
 
-In order to meet the goal of minimising actual coding and maximising use of open-source components, I aim to rapidly survey product and forum websites, to identify choices. To be a candidate for trial a component must be:
+I aim to rapidly survey product and forum websites, to identify choices. To be a candidate for trial a component must be:
 
 *	A necessary or highly desirable component of the finished system
-
 *	Able to be qickly and easily configured into the application. 
 
-I will use this methodology in an iterative fashion, while examining and speculating as to how each part and attempt at the build process will affect how the database system and web presentation comes together. There will be a level of trial and error in the steps which will determine the tasks in the final HOW-TO document, and this will ensure all the correct steps from this trialling will end up as concrete statements in this document. 
+I will use this methodology in an iterative fashion, while examining and speculating as to how each attempt will affect how the database system and web presentation comes together. There will be a level of trial and error in the steps which will determine the tasks in the final HOW-TO document, and this will ensure all the correct steps from this trialling will end up as concrete statements in this document. 
 
-###How will you use the technologies and resources to achieve your aims?
+###Use of Technologies
 
 I will focus on an Amazon (Free Tier) virtual machine providing these functionalities and in particular the optimal / custom alterations of the machine's OS' specifications such as RAM, Hard Disk space (as well as the procedure of adding an extra virtual drive known as an Elastic Block Store (EBS) to the virtual machine and so on.
 
-###Show the major phases of the project, milestones and deliverables. 
+###Major phases of the project and milestones 
 
 Investigation Phase
 
@@ -130,15 +136,6 @@ Finalisation Phase
 *	30th April : Final presentation ready
 *	5th May : Viva Presentation
 
-DELIVERABLES:
-
-*	Running cloud-based services
-*	Collection of specific HOW-TOs including screenshots
-*	Explanation of Components
-*	Design Document
-*	Discussion of functionality achieved
-*	Observations
-
 ###Consider major risks and contingencies.
 
 RISKS AND CONTINGENCIES:
@@ -149,9 +146,7 @@ Risks
 
 2: Some of the chosen components eg. Javascript libraries, Database libraries may turn out to be bad choices. This would obviously affect how much functionality I can deliver. The contingency here will be that in the evaluation phase, I will try to identify better choices and at least demonstrate that the short-comings of the initially chosen option can be resolved.
 
-###Generate a schedule using a Gantt chart or similar. 
-
-###Discussion regarding Ethics aspects, as well as data protection and safety relating to the project
+###Gantt Chart
 
 #### Ethical Considerations
 
