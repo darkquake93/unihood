@@ -4,28 +4,28 @@
 
 ##Abstract
 
-Many low-cost cloud-computing resources and new free open-source software components are available and have reduced the costs that were associated with the creation of web-based software systems. Although a large team of IT professionals and expensive hardware and communications resources are no longer necessary, and can be replaced by just a few individuals, it’s still essential for those individuals to be able to identify which tools and resources will meet their needs. They must also know how to effectively combine these tools to build their proposed system.
+Many low-cost cloud-computing resources and new free open-source software components are available. These have reduced the costs that were associated with the creation of web-based software systems. Although a large team of IT professionals and expensive hardware and communications resources are no longer necessary, and can be replaced by just a few individuals, it’s still essential for those individuals to be able to identify which tools and resources will meet their needs. They must also know how to effectively combine these tools to build their proposed system.
 This project is an attempt to itemise and instruct (in a “HOW-TO” fashion) one such combination of tools and resources that will allow a complete web application system to be built with minimal code, costs and manpower.
 The project will address many of the considerations that are essential for real-world feasibility, such as Security, Source control, Issue management, Disaster Recovery, Scalability and Maintainability.
-To achieve the above aims, I have chosen to build  system called “UniHood” which will allow a university community to review and comment on courses, their modules and lecturers in a more structured way than the typical forums and social networks.
+To achieve the above aims, I have chosen to build a system called “UniHood” which will allow a university community to review and comment on courses, their modules and lecturers in a more structured way than the typical forums and social networks.
 
 ##Background
 
 ###What stakeholders and topics are concerned?  
 
-It’s important to recognise that the primary audience for this report is not the community users of UniHood, but it is rather any organisations or individuals who are interested to see how a complete web application system can be assembled with minimum cost and effort using open-source and cloud-based resources as far as possible. 
+It’s important to recognise that the primary audience for this report is not the community of users of UniHood, but it is rather any organisations or individuals who are interested to see how a complete web application system can be assembled with minimum cost and effort using open-source and cloud-based resources as far as possible. 
 
 ###What problem will you address?
 
-There is a wide range of new tools which are becoming available, and one characteristic of the open-source environment is that each tool has a different owner, and so there is no one source that can guide effective use of these tools. This report attempts to provide at least one such guideline.
+There is a wide range of new tools which are becoming available, and one characteristic of the open-source environment is that each tool has a different owner, therefore there are very few resources that can guide how to combine these tools. This report attempts to provide at least one such guideline.
 
 ###Why is the project important? 
 
-This work is particularly important given the cost-savings that are being achieved via cloud-based computing. Many individuals and organisations would find the deliverables of this project extremely valuable.
+This work is particularly important given that the huge diversity of Open-Source components now available makes it extremely difficult for many students and individuals to get started with building a system such as UniHood. This project will help them begin to realise the cost-savings that are being achieved via cloud-based computing. 
 
 ###What are the benefits to the stakeholders?  
 
-Stakeholders should be able to use these instructions to build a completely different application.
+Stakeholders should be able to use these instructions to build a completely different application. Many individuals and organisations would find the HOW-TO deliverables of this project extremely valuable because of the significant time-saving if they want to start a project using similar tools.
 
 ###How does it relate to previous work and existing knowledge?
 
