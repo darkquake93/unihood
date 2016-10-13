@@ -72,6 +72,7 @@ EBS – Elastic Block Storage, mainly used for adding extra drives to currently 
 - Elastic IPs – A concept in which static IPs are able to be assigned to an Amazon Account and because of their “elasticity”, provide a means of mapping this same IP straight to another instance when the previously IP assigned instance fails.
 
 Ultimately, Amazon offers a “Free Tier” service which allows these resources to be used for free or very low-cost during the first year.
+
 •	GitHub for Source Control and as a Cloud-Based repository of project documentation. This is a free service for Open-Source project work.
 •	MySQL for database back-end
 •	PuTTY as an SSH client
@@ -90,19 +91,23 @@ The reasoning for this is that it is always impossible to speculate how the fina
 
 
 
+I have already noted above some of the technologies I have proposed to use, but an important aspect of this project is to survey and in some cases trail some alternatives to these and the additional components which will help me put a system together with minimal coding. Because of this requirement, I propose an unusual approach compared with the traditional structured methodologies; 
+
+In order to meet the goal of minimising actual coding and maximising use of open-source components, I aim to rapidly survey product and forum websites, to identify choices. To be a candidate for trial a component must be:
+
+•	A necessary or highly desirable component of the finished system
+
+•	Able to be qickly and easily configured into the application. 
+
+I will use this methodology in an iterative fashion, while examining and speculating as to how each part and attempt at the build process will affect how the database system and web presentation comes together. There will be a level of trial and error in the steps which will determine the tasks in the final HOW-TO document, and this will ensure all the correct steps from this trialling will end up as concrete statements in this document. 
+
 ###How will you use the technologies and resources to achieve your aims?
 
-A level of trial and error regarding the project setup’s HOW-TO will be applied, and this will give insight into their connection with the cloud-based resources. I will use these in an iterative fashion, examining how each part and attempt at the setup process will affect the database and its linkage with the website.
+
 
 I will focus on an Amazon (Free Tier) virtual machine providing these functionalities and in particular the optimal / custom alterations of the machine's OS' specifications such as RAM, Hard Disk space (as well as the procedure of adding an extra virtual drive known as an Elastic Block Store (EBS) to the virtual machine and so on.
 
 ###Show the major phases of the project, milestones and deliverables. 
-
-
-
-
-
-
 
 Investigation Phase
 
@@ -150,17 +155,19 @@ Risks
 
 ###Generate a schedule using a Gantt chart or similar. 
 
-
-
-###Appropriate methods, Feasible & Complete
-
-
-
 ###Discussion regarding Ethics aspects, as well as data protection and safety relating to the project
 
-##Intellectual Property Rights / Demonstrations / Access to Code
+#### Ethical Considerations
 
+The system will use Open-Source components as much as possible and will always acknowledge the source of any Open-Source software. Other resources, such as the Amazon Free-Tier, are encouraged for student use. For these reasons I see this system as having no ethical conflict, in terms of how it will be put together. Regarding the proposed application system "Uni-Hood", if it does actually get exposed to the community for use then this potentially raises questions of privacy and confidentiality of the users involved. If I succeed in getting the system to a stage where there is a genuine community of users, it will be necessary to get professional advice on whether there are any concerns here.
 
+#### Data Protection
+
+A feature of my method and an illustration of the modern approach to this type of project is that all code and documentation will be commited to GitHub, giving in effect a high confidence level that not only all work is easily accessable from the cloud, but a full audit trail will always be available. In order to protect from the extremely unlikely scenario of a catastrophic failure of the GitHub ecosystem, the system itself being built will work from its own local Git repository, which is a clone of the GitHub repository. In order to demonstrate the database backup and recoverability concepts, I expect to use Amazon's S3 facility which is an extremely reliable data storage resource. 
+
+##Intellectual Property Rights / Access to Code
+
+All of my own work and code will itself be Open-Source and visible to any GitHub user, and I will not be duplicating any similar work, hence I do not belive there are any issues regarding intellectual property rights. I am allowing my work to be publicly available and freely forkable by these users, with no limits in place such as freedom of distribution.
 
 #Extra Notes
 This project proposal aims to outline all objectives involved in the technical backend aspects of a practical website while aiming to minimise the associated costs. 
@@ -190,3 +197,14 @@ In terms of the actual business application to be modelled there is scope for th
 If disputes arise between myself and my Domain Name Registrar "Godaddy", then I would attempt to resolve this through contacting the UK registree about DNS settings needed to be handled by a different registrar.
 
 I suggest that within 30 minutes these problems can be rectified via use of appropriate skills from the website creator (aka me).
+
+"ideally" good word
+
+•	Javascript UI Framework
+eg. Bootstrap, Angular, JQuery UI
+•	Database Technology
+eg. mySQL, PostGressQL 
+•	Server-side Language Framework 
+eg. Frameworks for: PHP, Python, Ruby, Pearl, Mojolicious
+•	Configuration tools
+eg. Ansible, Docker
