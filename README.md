@@ -19,6 +19,15 @@ It’s important to recognise that the primary audience for this report is not t
 
 There is a wide range of new tools which are becoming available, and one characteristic of the open-source environment is that each tool has a different owner, therefore there are very few resources that can guide how to combine these tools. This report attempts to provide at least one such guideline.
 
+My project aims to:
+
+* Build a public facing database-backed website
+* Provide the tools and structure that would allow it to scale to higher complexity
+* Document all steps of the procedure in a way that will allow others to reach similar level of functionality, with minimal effort
+* Report, itemise and minimise any expenses
+* Minimise actual coding via maximum deployment of existing open-source components.
+* Provide system documentation
+
 ###Importance of Project
 
 This work is particularly important given that the huge diversity of Open-Source components now available makes it extremely difficult for many students and individuals to get started with building a system such as UniHood. This project will help them begin to realise the cost-savings that are being achieved via cloud-based computing. 
@@ -83,12 +92,15 @@ For Cloud-Computing resources I expect to use various Amazon AWS Resources such 
 
 Amazon offers a “Free Tier” service which allows these above resources to be used for free or very low-cost during the first year.
 
-Additional resources include:
+Additional resources to be chosen from:
 *	GitHub for Source Control and as a Cloud-Based repository of project documentation. This is a free service for Open-Source project work.
 *	MySQL for database back-end
 *	PuTTY as an SSH client
-*	Programming language; expecting at this stage to review and select a suitable framework based on one of PHP, Python, Ruby or Perl.
+*	Programming language eg. PHP, Python, Ruby or Perl.
 *	HTML5 / CSS / Javascript for browser-side programming
+*	Javascript UI Framework eg. Bootstrap, Angular, JQuery UI
+*	Database Technology eg. mySQL, PostGressQL 
+*	Configuration tools eg. Ansible, Docker
 
 ###Data Sources
 
@@ -109,6 +121,15 @@ I will use this methodology in an iterative fashion, while examining and specula
 ###Use of Technologies
 
 I will focus on an Amazon (Free Tier) virtual machine providing these functionalities and in particular the optimal / custom alterations of the machine's OS' specifications such as RAM, Hard Disk space (as well as the procedure of adding an extra virtual drive known as an Elastic Block Store (EBS) to the virtual machine and so on.
+
+This project proposal aims to outline all objectives involved in the technical backend aspects of a practical website while aiming to minimise the associated costs. 
+The objectives involved include setting up and managing a database environment (planning to use SQL Developer or similar), creation, configuration and connection to Virtual Machine (VM) instances (through Amazon Web Services), reservation of domain name through GoDaddy and its assignment to the UK registree.
+
+Additional objectives regarding connection to the VM instance via an SSH client (PuTTY in this case) include a series of steps provided by Amazon on the "connection" window, and include implementation of private key files (both .pem and .ppk extensions) which provide a secure connection between PuTTY and the VM.
+
+The significance of this work to my study of the Computer Science course is of utilising my existing skills to create a unique E-Learning system, unique in a way that it differs from my usual projects such as coded applications for external theoretical companies. At the same time, it will benefit the students of Kingston University through offering their lecturers insight as to which teaching methods / techniques are most effective, and is open for adaptation in the forseeable future. The only relation to previous work is the implementation of the database heirarchy, the majority consists of working with new cloud-based technologies and implementing the services like Virtual Machine management they offer. My existing knowledge of Virtual Machines and the like however, will be fully applied to the construction of this database-backed website.
+
+By the completion of the website, there will be situations where problems may still arise and will need to be investigated promptly; for the purposes of the final report these will be investigated ahead of time. If for example there is a case to recreate a VM instance, then resolution via the "Elastic IP" concept and ip reset for the domain name on Godaddy will need to be addressed. My hyposthesis aims to test whether these problems can be resolved within a reasonable time that, theoretically, would not affect development of the main project.
 
 ###Major phases of the project and milestones 
 
@@ -160,34 +181,8 @@ A feature of my method and an illustration of the modern approach to this type o
 
 All of my own work and code will itself be Open-Source and visible to any GitHub user, and I will not be duplicating any similar work, hence I do not belive there are any issues regarding intellectual property rights. I am allowing my work to be publicly available and freely forkable by these users, with no limits in place such as freedom of distribution.
 
-#Extra Notes
-
-My project aims to:
-
-* Build a public facing database-backed website
-* Provide the tools and structure that would allow it to scale to higher complexity
-* Document all steps of the procedure in a way that will allow others to reach similar level of functionality, with minimal effort
-* Report, itemise and minimise any expenses
-* Minimise actual coding via maximum deployment of existing open-source components.
-* Provide system documentation
-
-This project proposal aims to outline all objectives involved in the technical backend aspects of a practical website while aiming to minimise the associated costs. 
-The objectives involved include setting up and managing a database environment (planning to use SQL Developer or similar), creation, configuration and connection to Virtual Machine (VM) instances (through Amazon Web Services), reservation of domain name through GoDaddy and its assignment to the UK registree.
-
-Additional objectives regarding connection to the VM instance via an SSH client (PuTTY in this case) include a series of steps provided by Amazon on the "connection" window, and include implementation of private key files (both .pem and .ppk extensions) which provide a secure connection between PuTTY and the VM.
-
-The significance of this work to my study of the Computer Science course is of utilising my existing skills to create a unique E-Learning system, unique in a way that it differs from my usual projects such as coded applications for external theoretical companies. At the same time, it will benefit the students of Kingston University through offering their lecturers insight as to which teaching methods / techniques are most effective, and is open for adaptation in the forseeable future. The only relation to previous work is the implementation of the database heirarchy, the majority consists of working with new cloud-based technologies and implementing the services like Virtual Machine management they offer. My existing knowledge of Virtual Machines and the like however, will be fully applied to the construction of this database-backed website.
-
-By the completion of the website, there will be situations where problems may still arise and will need to be investigated promptly; for the purposes of the final report these will be investigated ahead of time. If for example there is a case to recreate a VM instance, then resolution via the "Elastic IP" concept and ip reset for the domain name on Godaddy will need to be addressed. My hyposthesis aims to test whether these problems can be resolved within a reasonable time that, theoretically, would not affect development of the main project.
 
 
 
 
-*	Javascript UI Framework
-eg. Bootstrap, Angular, JQuery UI
-*	Database Technology
-eg. mySQL, PostGressQL 
-*	Server-side Language Framework 
-eg. Frameworks for: PHP, Python, Ruby, Pearl, Mojolicious
-*	Configuration tools
-eg. Ansible, Docker
+
