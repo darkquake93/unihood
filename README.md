@@ -35,37 +35,38 @@ There is a long tradition of “HOW-TOs” in the open-source community, and som
 
 ###What will the project deliver? 
 
-A collection of  HOW-TOs, where each task is one of the important steps required to build the system.
+The principle deliverable is a collection of HOW-TOs, where each task is one of the important steps required to build the system. A secondary deliverable will be the UniHood system operating as a live public-facing website.
 
 ###Are there intermediate or enabling deliverables?
 
 There are many intermediate deliverables, each of which is self-contained and may be of value to many different types of projects.
 Some of these deliverables will be self-contained discussions of:
 
-•	Authentication
-•	Authorisation
-•	Security
-•	Configuration
-•	Source control
-•	Issue management
-•	Backup
-•	Disaster Recovery
-•	Scalability
-•	Productivity
-•	Automated testing
-•	Continuous Intergration
-•	Continuous Delivery
-•	Continuity of Service
+*	Authentication
+*	Authorisation
+*	Security
+*	Configuration
+*	Source control
+*	Issue management
+*	Backup
+*	Disaster Recovery
+*	Scalability
+*	Productivity
+*	Automated testing
+*	Continuous Intergration
+*	Continuous Delivery
+*	Continuity of Service
+* Domain Name Management
  
 ##Technologies & Resources
 
 ###List the major resources required.  
 
-•	Amazon AWS, MySql and other Online Documentation resources
+*	Amazon AWS, MySql and other Online Documentation resources
 
 ###What technologies are you going to use?
 
-•	For Cloud-Computing resources I expect to use various Amazon AWS Resources such as:
+*	For Cloud-Computing resources I expect to use various Amazon AWS Resources such as:
 EC2 – Elastic Compute Cloud, dedicated to managing Amazon Virtual Machines.
 S3 - Simple Storage Service, allows upload and download of very large files
 EBS – Elastic Block Storage, mainly used for adding extra drives to currently running Virtual Machine instances.
@@ -73,11 +74,11 @@ EBS – Elastic Block Storage, mainly used for adding extra drives to currently 
 
 Ultimately, Amazon offers a “Free Tier” service which allows these resources to be used for free or very low-cost during the first year.
 
-•	GitHub for Source Control and as a Cloud-Based repository of project documentation. This is a free service for Open-Source project work.
-•	MySQL for database back-end
-•	PuTTY as an SSH client
-•	Programming language; expecting at this stage to review and select a suitable framework based on one of PHP, Python, Ruby or Perl.
-•	HTML5 / CSS / Javascript for browser-side programming
+*	GitHub for Source Control and as a Cloud-Based repository of project documentation. This is a free service for Open-Source project work.
+*	MySQL for database back-end
+*	PuTTY as an SSH client
+*	Programming language; expecting at this stage to review and select a suitable framework based on one of PHP, Python, Ruby or Perl.
+*	HTML5 / CSS / Javascript for browser-side programming
 
 ###Where will your data come from?
 
@@ -89,21 +90,17 @@ The reasoning for this is that it is always impossible to speculate how the fina
 
 ##Method & Work Plan
 
-
-
 I have already noted above some of the technologies I have proposed to use, but an important aspect of this project is to survey and in some cases trail some alternatives to these and the additional components which will help me put a system together with minimal coding. Because of this requirement, I propose an unusual approach compared with the traditional structured methodologies; 
 
 In order to meet the goal of minimising actual coding and maximising use of open-source components, I aim to rapidly survey product and forum websites, to identify choices. To be a candidate for trial a component must be:
 
-•	A necessary or highly desirable component of the finished system
+*	A necessary or highly desirable component of the finished system
 
-•	Able to be qickly and easily configured into the application. 
+*	Able to be qickly and easily configured into the application. 
 
 I will use this methodology in an iterative fashion, while examining and speculating as to how each part and attempt at the build process will affect how the database system and web presentation comes together. There will be a level of trial and error in the steps which will determine the tasks in the final HOW-TO document, and this will ensure all the correct steps from this trialling will end up as concrete statements in this document. 
 
 ###How will you use the technologies and resources to achieve your aims?
-
-
 
 I will focus on an Amazon (Free Tier) virtual machine providing these functionalities and in particular the optimal / custom alterations of the machine's OS' specifications such as RAM, Hard Disk space (as well as the procedure of adding an extra virtual drive known as an Elastic Block Store (EBS) to the virtual machine and so on.
 
@@ -111,37 +108,36 @@ I will focus on an Amazon (Free Tier) virtual machine providing these functional
 
 Investigation Phase
 
-•	30th September : Verification of Amazon "Free Tier" account including creation of and access to a virtual linux server instance and progressive documentation 
-•	14th October : Proposal Due
+*	30th September : Verification of Amazon "Free Tier" account including creation of and access to a virtual linux server instance and progressive documentation 
+*	14th October : Proposal Due
 
 Skeletal Phase
 
-•	31st October : Database technologies evaluated, skeletal database established 
-•	30th November : Programming technologies evaluated, initial screens implemented
-•	16th December : Early Prototype Demo Presentation
-•	31st December : Final technical direction in place
+*	31st October : Database technologies evaluated, skeletal database established 
+*	30th November : Programming technologies evaluated, initial screens implemented
+*	16th December : Early Prototype Demo Presentation
+*	31st December : Final technical direction in place
 
 Construction Phase
 
-•	31st January : Body of code construction implemented
-•	28th February : Review and re-evaluation of technical options and re-implementation where necessary, essential functionality complete
+*	31st January : Body of code construction implemented
+*	28th February : Review and re-evaluation of technical options and re-implementation where necessary, essential functionality complete
 
 Finalisation Phase
 
-• 31st March : Compilation of all screenshots and explanations into report
-•	24th April : Final Report Due
-•	30th April : Final presentation ready
-•	5th May : Viva Presentation
+* 31st March : Compilation of all screenshots and explanations into report
+*	24th April : Final Report Due
+*	30th April : Final presentation ready
+*	5th May : Viva Presentation
 
 DELIVERABLES:
 
-•	Running cloud-based services
-•	Collection of specific HOW-TOs including screenshots
-•	Explanation of Components
-•	Design Document
-•	Discussion of functionality achieved
-•	Observations
-
+*	Running cloud-based services
+*	Collection of specific HOW-TOs including screenshots
+*	Explanation of Components
+*	Design Document
+*	Discussion of functionality achieved
+*	Observations
 
 ###Consider major risks and contingencies.
 
@@ -200,11 +196,11 @@ I suggest that within 30 minutes these problems can be rectified via use of appr
 
 "ideally" good word
 
-•	Javascript UI Framework
+*	Javascript UI Framework
 eg. Bootstrap, Angular, JQuery UI
-•	Database Technology
+*	Database Technology
 eg. mySQL, PostGressQL 
-•	Server-side Language Framework 
+*	Server-side Language Framework 
 eg. Frameworks for: PHP, Python, Ruby, Pearl, Mojolicious
-•	Configuration tools
+*	Configuration tools
 eg. Ansible, Docker
