@@ -1333,7 +1333,7 @@
 <XPD:REF name="Associations[1]">/HhI2ZhlGUGTP083f4qaHgAA</XPD:REF>
 <XPD:ATTR name="#Attributes" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="6ztRvoo0Q02hM0UQlvoQzQAA">
-<XPD:ATTR name="Name" type="string">lm_id (CPK)</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">lecturer_id (CPK)</XPD:ATTR>
 <XPD:REF name="Owner">p2w0ysxON0GVKcq9yTbGfAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="lLxFS3oDz0OTD35BcDDL+QAA">
@@ -1477,8 +1477,8 @@
 <XPD:REF name="Participant">9BtXhqdDXUuWlW45Rfd31QAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">6svwBAd3GkeAvDzUenb7mgAA</XPD:REF>
-<XPD:REF name="Views[1]">W9TA4J/asUadon9fJQ+mSQAA</XPD:REF>
-<XPD:REF name="Views[2]">/dMZZrOPxk6Slel21ybDBwAA</XPD:REF>
+<XPD:REF name="Views[1]">/dMZZrOPxk6Slel21ybDBwAA</XPD:REF>
+<XPD:REF name="Views[2]">W9TA4J/asUadon9fJQ+mSQAA</XPD:REF>
 <XPD:REF name="Views[3]">fYeKaosZ/EKlR7an+Fx/vgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Connections[1]" type="UMLAssociationEnd" guid="k4nR9QGyDkibQQVWy8VfVgAA">
@@ -1487,8 +1487,8 @@
 <XPD:REF name="Participant">Ncm/dKF+Zk6VZR1TmdHqTQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">xJkWo3ya206e5L6rJ5ilggAA</XPD:REF>
-<XPD:REF name="Views[1]">SVAjM4HQu0ufuYU2UMrD5AAA</XPD:REF>
-<XPD:REF name="Views[2]">liknoXWjIkqtUg9gW9HziQAA</XPD:REF>
+<XPD:REF name="Views[1]">liknoXWjIkqtUg9gW9HziQAA</XPD:REF>
+<XPD:REF name="Views[2]">SVAjM4HQu0ufuYU2UMrD5AAA</XPD:REF>
 <XPD:REF name="Views[3]">LB89bZevnkeh128oxjSU7wAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
