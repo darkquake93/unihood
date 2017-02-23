@@ -80,7 +80,7 @@ ALTER SEQUENCE enrolled_enrolled_id_seq OWNED BY enrolled.enrolled_id;
 -- Name: enrolled_enrolled_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
 --
 
-SELECT pg_catalog.setval('enrolled_enrolled_id_seq', 1, false);
+SELECT pg_catalog.setval('enrolled_enrolled_id_seq', 3, true);
 
 
 --
@@ -307,7 +307,7 @@ ALTER SEQUENCE "moduleRating_mr_id_seq" OWNED BY module_rating.mr_id;
 -- Name: moduleRating_mr_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
 --
 
-SELECT pg_catalog.setval('"moduleRating_mr_id_seq"', 1, false);
+SELECT pg_catalog.setval('"moduleRating_mr_id_seq"', 1, true);
 
 
 --
@@ -649,6 +649,9 @@ ALTER TABLE ONLY usage ALTER COLUMN usage_id SET DEFAULT nextval('usage_usage_id
 -- Data for Name: enrolled; Type: TABLE DATA; Schema: public; Owner: unihood
 --
 
+INSERT INTO enrolled VALUES (1, 1, 2);
+INSERT INTO enrolled VALUES (2, 1, 1);
+INSERT INTO enrolled VALUES (3, 2, 2);
 
 
 --
@@ -679,13 +682,15 @@ INSERT INTO module VALUES (2, 'Fashion Analysis', 50, 'FA3090');
 -- Data for Name: module_rating; Type: TABLE DATA; Schema: public; Owner: unihood
 --
 
+INSERT INTO module_rating VALUES (1, 5, 'The most useful module I''ve ever taken! Now I can amaze people in the kitchen', 1, 1);
 
 
 --
 -- Data for Name: student; Type: TABLE DATA; Schema: public; Owner: unihood
 --
 
-INSERT INTO student VALUES (1, 'Bob', 'Jones', NULL, NULL, NULL);
+INSERT INTO student VALUES (2, 'Sherlock', 'Holmes', 'gameison@gmail.com', '0748 310 2938', '221b Baker St');
+INSERT INTO student VALUES (1, 'Bob', 'Jones', 'genericbob@gmail.com', '0739 398 1029', '18 Void St');
 
 
 --
