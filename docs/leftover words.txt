@@ -1,0 +1,23 @@
+FROM STEPS DOCUMENT
+
+It is a requirement of the AWS sign-up process to link this account as the services will be tied to it. The sign-up process does not provide you with full access to the AWS services right away, as it is seen as a kind of request form for which you will need to wait on a response from and/or keep in contact with Amazon themselves regards if and when they allow you to use these services.
+
+It may take some weeks, though when the AWS are linked to your account there is a “free tier” program available for usewhich can greatly help minimise the costs when using (in this case) virtual machines. Options which are eligible for this are indicated clearly on each step of the instance creation process, so there is strong assurance that the right choice is being made cost-wise. 
+
+To list files installed by the package 'phpPgAdmin' type “rpm -ql phpPgAdmin”. A similar command “chkconfig” will list all packages currently available. Postgresql94 and postgresql95 should be listed there, from the installation in the above step (depending on which version was chosen). To start the service, type for example “service postgresql95 start”. You should now be able to access the phpPgAdmin management console at the link “(virtual machine IP)/phpPgAdmin”. The “httpd” service will also need to be started, so similarly type “service httpd start”.
+
+(Instruct here how to set up the Unihood user)
+
+Initially when trying to create a database table using the phpPgAdmin web management page at (Virtual Amazon IP)/phpPgAdmin, an error will show relating to a column named “spclocation” not existing. Following the simple instructions at http://frustratedtech.com/post/39936405077/fix-cpanel-phppgadmin-to-work-with-postgres9x replacing the generic path names etc with the actual values, this issue was fixed and tables could be created from that point.
+
+
+
+OTHER STUFF TO ADD IN
+
+Safe storage of passwords - After setting up the "Boxcryptor" Windows program, I quickly moved onto selecting my already existing "Important Notes" folder on Dropbox to be encrypted through Boxcryptor. 
+The original folder has a large collection of important notes as in the title, and when these were encrypted they were all converted to Boxcryptor files instead, given the ".bc" extension. Hence, after using even higher-level credentials to sign into this program, I am only able to view my notes through this. Within the notes folder, of course, are my credentials for Amazon AWS. 
+Then, I simply downloaded the Boxcryptor app for mobile also, for further ease of use in that I can sign in there when I do not have access to my home computer.
+
+Putty, ssh etc files - Although it would be ideal to also have these encrypted, I have chosen not to, given these are not simple text files which means usually, and in this case, other programs and services are using them. Nevertheless, these security files are also stored in my Dropbox folder at the root.
+
+I have an important trail on GITHUB - FULL VERSION HISTORY
