@@ -1,0 +1,13 @@
+Evidence to reader on research that has been carried out
+evidence on having studied the content, why the solution needs to be come up with
+
+look at samples
+out-in structure (talk about cloud computing etc, home in in the middle)
+focus on various articles, discussions
+analysis of data through tables etc.
+
+analysis of the various architectures, their applications. Literature review: Also the need for the technologies, "I found that (approach) was the best, to achieve the knowledge I acquired during the project)
+Literature Review: 20-30 references and 5-8 pages, cover papers, discussions, regarding technical areas etc. Remember to keep a balance, eg not just technical.
+Maybe introduce a workflow / activity diagram, to visualise the steps I took
+Try to put steps into framework, kind of small introduction / required tools to introduce steps (adaptable to other systems like Windows, Mac etc)
+Data mining example
