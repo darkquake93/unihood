@@ -1,8 +1,6 @@
 FROM STEPS DOCUMENT
 
-It is a requirement of the AWS sign-up process to link this account as the services will be tied to it. The sign-up process does not provide you with full access to the AWS services right away, as it is seen as a kind of request form for which you will need to wait on a response from and/or keep in contact with Amazon themselves regards if and when they allow you to use these services.
 
-It may take some weeks, though when the AWS are linked to your account there is a “free tier” program available for usewhich can greatly help minimise the costs when using (in this case) virtual machines. Options which are eligible for this are indicated clearly on each step of the instance creation process, so there is strong assurance that the right choice is being made cost-wise. 
 
 To list files installed by the package 'phpPgAdmin' type “rpm -ql phpPgAdmin”. A similar command “chkconfig” will list all packages currently available. Postgresql94 and postgresql95 should be listed there, from the installation in the above step (depending on which version was chosen). To start the service, type for example “service postgresql95 start”. You should now be able to access the phpPgAdmin management console at the link “(virtual machine IP)/phpPgAdmin”. The “httpd” service will also need to be started, so similarly type “service httpd start”.
 
