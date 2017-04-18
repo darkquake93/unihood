@@ -1,0 +1,161 @@
+    1  id
+    2  psql
+    3  history
+[unihood@ip-172-31-39-187 ~]$ logout
+[root@ip-172-31-39-187 ec2-user]# history
+    1  yum update
+    2  yum list
+    3  yum list | grep postgres
+    4  yum list | grep -i phppgadmin
+    5  cat /etc/*release*
+    6  ls /etc/*release*
+    7  cd /etc yum.repos.d
+    8  ls
+    9  cd /etc/yum.repos.d
+   10  ls
+   11  ls -l
+   12  rpm -Uvh http://yum.postgresql.org/9.4/redhat/rhel-6-x86_64/pgdg-centos94-9.4-1.noarch.rpm
+   13  rpm -Uvh https://download.postgresql.org/pub/repos/yum/9.4/redhat/rhel-6-x86_64/pgdg-ami201503-94-9.4-3.noarch.rpm
+   14  ls -l
+   15  yum list | grep -i phppgadmin
+   16  yum list | grep -i pgdg
+   17  yum list | grep -i phppgadmin
+   18  ls -l
+   19  yum update
+   20  uname -a
+   21  reboot
+   22  history
+   23  yum list  | grep postg
+   24  yum install postgres95-server
+   25  yum install postgresql95-server
+   26  yum install postgresql95-devel postgresql95-docs
+   27  yum install postgresql95-contrib
+   28  service postgresql-9.4 help
+   29  service postgresql-9.5 help
+   30  service postgresql95 help
+   31  service postgresql95 initdb
+   32  service postgresql95 start
+   33  chkconfig postgresql95 on
+   34  ps -Hef
+   35  su - postgres
+   36  vi /var/log/messages
+   37  ls -lart /var/log
+   38  vi /var/log/secure
+   39  grep '[Ii]nvalid user' /var/log/secure
+   40  vi /etc/ssh/sshd_config
+   41  vi /etc/ssh/sshd_config
+   42  vi /etc/ssh/sshd_config
+   43  cd
+   44  sudo su - postgres
+   45  useradd unihood
+   46  passwd unihood
+   47  su - unihood
+   48  yum install phpPgAdmin httpd
+   49  service httpd start
+   50  ifconfig
+   51  ls -l /etc/yum.repos.d/
+   52  yum --help
+   53  yum repolist
+   54  cd /etc/yum.repos.d/
+   55  ls -l
+   56  vi epel.repo
+   57  cd
+   58  yum install phpPgAdmin
+   59  yum install php
+   60  yum install php-pgsql
+   61  yum install phpPgAdmin
+   62  history
+   63  cd /etc/httpd/
+   64  ls -l
+   65  httpd --version
+   66  httpd -V
+   67  cd conf.d
+   68  ls
+   69  vi phpPgAdmin.conf
+   70  service httpd restart
+   71  service postgresql95 restart
+   72  yum list | grep -i phppg
+   73  rpm -ql pphPgAdmin
+   74  rpm -ql phpPgAdmin
+   75  yum list | grep -i phppg
+   76  yum list | grep -i mysql
+   77  clr
+   78  clear
+   79  yum list mysql
+   80  yum install mysql.noarch
+   81  yum list phpmyadmin
+   82  yum install phpMyAdmin.noarch
+   83  yum update
+   84  yum install postgresql94-server postgresql94-contrib
+   85  service postgresql-9.4 initdb
+   86  yum list *postgres*
+   87  service postgresql-9.5 initdb
+   88  yum install epel-release enable=1
+   89  yum install epel-release enable=1exit
+   90  exit
+   91  yum list | grep phppg
+   92  set -o vi
+   93  yum list | grep -i phppg
+   94  rpm -ql phpPgAdmin
+   95  cd /usr/share/phpPgAdmin/
+   96  find  | grep Postgres.php
+   97  vi ./classes/database/Postgres.php
+   98  vim ./classes/database/Postgres.php
+   99  chkconfig --list
+  100  service postgresql95 restart
+  101  service httpd restart
+  102  service httpd status
+  103  service httpd start
+  104  history
+  105  ls -l /etc/yum.repos.d
+  106  yum list | grep postgres
+  107  yum list | phppg
+  108  yum list | grep phppg
+  109  yum list | grep -i phppg
+  110  history
+  111  aws s3
+  112  yum list | grep -i phppg
+  113  chkconfig postgresql95 on
+  114  chkconfig postgresql94 on
+  115  service postgresql95 start
+  116  service postgresql95 status
+  117  service postgresql94 start
+  118  service httpd start
+  119  chkconfig --list
+  120  w
+  121  chkconfig --add httpd
+  122  chkconfig --list
+  123  set -o vi
+  124  chkconfig --help
+  125  chkconfig --level 35 httpd on
+  126  chkconfig --list
+  127  chkconfig --level 35 postgresql94  off
+  128  chkconfig --list
+  129  yum erase postgresql94
+  130  reboot
+  131  set -o vi
+  132  chkconfig --list
+  133  runlevel
+  134  service httpd status
+  135  cd /etc/httpd/
+  136  ls
+  137  vi conf/httpd.conf
+  138  vim conf/httpd.conf
+  139  vi ~/.vimrc
+  140  vim conf/httpd.conf
+  141  vi /var/www/html/blah.html
+  142  cd /var/www/html/
+  143  mv blah.html index.html
+  144  pwd
+  145  cat index.html
+  146  cd /usr/share
+  147  cd phpPgAdmin/
+  148  vi dbexport.php
+  149  set -o vi
+  150  vim dbexport.php
+  151  ls /home/unihood
+  152  ls
+  153  sudo unihood
+  154  su unihood
+  155  su - unihood
+  156  history
