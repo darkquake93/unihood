@@ -2,6 +2,7 @@ Minimising costs
 
 Dump Github issues etc in body, as indication of further research areas exposed by this project
 
-Screenshots document
+Make sure HOWTO is spelt correctly throughout document 
+Make sure PostgreSQL is spelt correctly throughout document 
 
-
+incorporate StarUML diagram into discussion on database design
