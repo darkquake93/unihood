@@ -1,0 +1,66 @@
+Introduction
+Literature Review
+
+
+Context
+
+ANALYSIS
+
+Methodology
+Documentation Strategy
+Backup techniques (test data, use PhpPgAdmin frequently to export dump files, considered Ansible and Terraform etc)
+Hack attempt prevention, disabling clear-text password login access
+Use of Technologies
+Server hosting In House
+OS (Windows VS Linux)
+Ethical Considerations
+Regular yum update to enforce preventing of vulnerabilities regarding security issues
+SQL Injection Attack Prevention
+Data Protection
+Intellectual Property Rights / Access to Code
+Selection of Technologies
+Docker consideration
+
+Choice of Amazon as a Cloud Provider
+Choice of Virtual Machine Hosting service
+Choice of Source Control (GitHub vs Dropbox) 
+Access from Local Workstation to Remote Server
+Choice of Linux distribution (Amazon Linux)
+
+Technologies Utilised
+Selection and purchase of the Domain Name
+Selection of Amazon Web Services
+Consideration of EBS service
+Selection of Amazon Machine Image (AMI)
+
+
+DESIGN
+
+Database Design Strategy
+Physical Database Implementation
+Database (Technology, Management tool PHPPgAdmin)
+Schematic of System Components
+StarUML Class Diagram
+Data Sources
+
+IMPLEMENTATION
+
+Installation of PostgreSQL
+
+Standard Connection Method : Console Access
+Optional Connection Method : Mobile Console Access
+Source Control from Windows : TortoiseGit
+Secure / Authenticated Command Line Access : Putty and PPK file
+Optional GitHub Management Tool : OctoDroid
+
+Future Directions for the Project
+Backup/Disaster Recovery
+Scalability
+Automated testing
+Continuous Integration
+Continuous Delivery
+
+Testing & Evaluation
+Critical Review
+Appendix A
+Bibliography
