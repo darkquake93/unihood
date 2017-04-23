@@ -5,7 +5,7 @@ use warnings;
 
 use base qw/Mojolicious::Plugin::Tables::Model/;
 
-sub connect_info { [ 'dbi:Pg:dbname="unihood";host=""', 'unihood', 'unihood' ] }
+sub connect_info { [ 'dbi:Pg:dbname="unihood";host=""', 'unihood', $ENV{UNIHOOD_PWD}] }
 
 sub glossary { +{
     avg   => 'Average',
