@@ -1,0 +1,939 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: enrolled; Type: TABLE; Schema: public; Owner: unihood; Tablespace: 
+--
+
+CREATE TABLE enrolled (
+    enrolled_id integer NOT NULL,
+    student_id integer NOT NULL,
+    module_id integer NOT NULL
+);
+
+
+ALTER TABLE enrolled OWNER TO unihood;
+
+--
+-- Name: COLUMN enrolled.student_id; Type: COMMENT; Schema: public; Owner: unihood
+--
+
+COMMENT ON COLUMN enrolled.student_id IS 'References student > student_id';
+
+
+--
+-- Name: COLUMN enrolled.module_id; Type: COMMENT; Schema: public; Owner: unihood
+--
+
+COMMENT ON COLUMN enrolled.module_id IS 'References module > module_id';
+
+
+--
+-- Name: enrolled_enrolled_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE enrolled_enrolled_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE enrolled_enrolled_id_seq OWNER TO unihood;
+
+--
+-- Name: enrolled_enrolled_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE enrolled_enrolled_id_seq OWNED BY enrolled.enrolled_id;
+
+
+--
+-- Name: enrolled_module_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE enrolled_module_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE enrolled_module_id_seq OWNER TO unihood;
+
+--
+-- Name: enrolled_module_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE enrolled_module_id_seq OWNED BY enrolled.module_id;
+
+
+--
+-- Name: enrolled_student_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE enrolled_student_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE enrolled_student_id_seq OWNER TO unihood;
+
+--
+-- Name: enrolled_student_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE enrolled_student_id_seq OWNED BY enrolled.student_id;
+
+
+--
+-- Name: lecturer; Type: TABLE; Schema: public; Owner: unihood; Tablespace: 
+--
+
+CREATE TABLE lecturer (
+    lecturer_id integer NOT NULL,
+    lecturer_name text NOT NULL,
+    lecturer_address text NOT NULL,
+    lecturer_email text NOT NULL,
+    lecturer_phone text NOT NULL
+);
+
+
+ALTER TABLE lecturer OWNER TO unihood;
+
+--
+-- Name: lecturer_rating; Type: TABLE; Schema: public; Owner: unihood; Tablespace: 
+--
+
+CREATE TABLE lecturer_rating (
+    lr_id integer NOT NULL,
+    lr_value integer NOT NULL,
+    lr_text text NOT NULL,
+    student_id integer NOT NULL,
+    lecturer_id integer NOT NULL
+);
+
+
+ALTER TABLE lecturer_rating OWNER TO unihood;
+
+--
+-- Name: COLUMN lecturer_rating.student_id; Type: COMMENT; Schema: public; Owner: unihood
+--
+
+COMMENT ON COLUMN lecturer_rating.student_id IS 'References student > student_id';
+
+
+--
+-- Name: COLUMN lecturer_rating.lecturer_id; Type: COMMENT; Schema: public; Owner: unihood
+--
+
+COMMENT ON COLUMN lecturer_rating.lecturer_id IS 'References lecturer > lecturer_id';
+
+
+--
+-- Name: lecturerRating_lr_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE "lecturerRating_lr_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE "lecturerRating_lr_id_seq" OWNER TO unihood;
+
+--
+-- Name: lecturerRating_lr_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE "lecturerRating_lr_id_seq" OWNED BY lecturer_rating.lr_id;
+
+
+--
+-- Name: lecturer_lecturer_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE lecturer_lecturer_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE lecturer_lecturer_id_seq OWNER TO unihood;
+
+--
+-- Name: lecturer_lecturer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE lecturer_lecturer_id_seq OWNED BY lecturer.lecturer_id;
+
+
+--
+-- Name: module; Type: TABLE; Schema: public; Owner: unihood; Tablespace: 
+--
+
+CREATE TABLE module (
+    module_id integer NOT NULL,
+    module_name text NOT NULL,
+    population integer NOT NULL,
+    module_code text NOT NULL
+);
+
+
+ALTER TABLE module OWNER TO unihood;
+
+--
+-- Name: module_rating; Type: TABLE; Schema: public; Owner: unihood; Tablespace: 
+--
+
+CREATE TABLE module_rating (
+    mr_id integer NOT NULL,
+    mr_value integer NOT NULL,
+    mr_text text NOT NULL,
+    module_id integer NOT NULL,
+    student_id integer NOT NULL
+);
+
+
+ALTER TABLE module_rating OWNER TO unihood;
+
+--
+-- Name: COLUMN module_rating.module_id; Type: COMMENT; Schema: public; Owner: unihood
+--
+
+COMMENT ON COLUMN module_rating.module_id IS 'References module > module_id';
+
+
+--
+-- Name: COLUMN module_rating.student_id; Type: COMMENT; Schema: public; Owner: unihood
+--
+
+COMMENT ON COLUMN module_rating.student_id IS 'References student > student_id';
+
+
+--
+-- Name: moduleRating_mr_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE "moduleRating_mr_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE "moduleRating_mr_id_seq" OWNER TO unihood;
+
+--
+-- Name: moduleRating_mr_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE "moduleRating_mr_id_seq" OWNED BY module_rating.mr_id;
+
+
+--
+-- Name: module_module_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE module_module_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE module_module_id_seq OWNER TO unihood;
+
+--
+-- Name: module_module_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE module_module_id_seq OWNED BY module.module_id;
+
+
+--
+-- Name: student; Type: TABLE; Schema: public; Owner: unihood; Tablespace: 
+--
+
+CREATE TABLE student (
+    student_id integer NOT NULL,
+    student_fname text NOT NULL,
+    student_lname text NOT NULL,
+    student_email text,
+    student_phone text,
+    student_address text
+);
+
+
+ALTER TABLE student OWNER TO unihood;
+
+--
+-- Name: taught; Type: TABLE; Schema: public; Owner: unihood; Tablespace: 
+--
+
+CREATE TABLE taught (
+    taught_id integer NOT NULL,
+    module_id integer,
+    lecturer_id integer
+);
+
+
+ALTER TABLE taught OWNER TO unihood;
+
+--
+-- Name: COLUMN taught.module_id; Type: COMMENT; Schema: public; Owner: unihood
+--
+
+COMMENT ON COLUMN taught.module_id IS 'References module > module_id';
+
+
+--
+-- Name: COLUMN taught.lecturer_id; Type: COMMENT; Schema: public; Owner: unihood
+--
+
+COMMENT ON COLUMN taught.lecturer_id IS 'References lecturer > lecturer_id';
+
+
+--
+-- Name: taught_taught_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE taught_taught_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE taught_taught_id_seq OWNER TO unihood;
+
+--
+-- Name: taught_taught_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE taught_taught_id_seq OWNED BY taught.taught_id;
+
+
+--
+-- Name: teaching_method; Type: TABLE; Schema: public; Owner: unihood; Tablespace: 
+--
+
+CREATE TABLE teaching_method (
+    tm_id integer NOT NULL,
+    tm_name text NOT NULL,
+    tm_avg_rating integer NOT NULL
+);
+
+
+ALTER TABLE teaching_method OWNER TO unihood;
+
+--
+-- Name: teachingMethod_tm_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE "teachingMethod_tm_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE "teachingMethod_tm_id_seq" OWNER TO unihood;
+
+--
+-- Name: teachingMethod_tm_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE "teachingMethod_tm_id_seq" OWNED BY teaching_method.tm_id;
+
+
+--
+-- Name: usage; Type: TABLE; Schema: public; Owner: unihood; Tablespace: 
+--
+
+CREATE TABLE usage (
+    lecturer_id integer NOT NULL,
+    tm_id integer NOT NULL,
+    usage_id integer NOT NULL
+);
+
+
+ALTER TABLE usage OWNER TO unihood;
+
+--
+-- Name: COLUMN usage.lecturer_id; Type: COMMENT; Schema: public; Owner: unihood
+--
+
+COMMENT ON COLUMN usage.lecturer_id IS 'References lecturer > lecturer_id';
+
+
+--
+-- Name: COLUMN usage.tm_id; Type: COMMENT; Schema: public; Owner: unihood
+--
+
+COMMENT ON COLUMN usage.tm_id IS 'References teachingMethod > tm_id';
+
+
+--
+-- Name: usage_lecturer_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE usage_lecturer_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE usage_lecturer_id_seq OWNER TO unihood;
+
+--
+-- Name: usage_lecturer_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE usage_lecturer_id_seq OWNED BY usage.lecturer_id;
+
+
+--
+-- Name: usage_tm_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE usage_tm_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE usage_tm_id_seq OWNER TO unihood;
+
+--
+-- Name: usage_tm_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE usage_tm_id_seq OWNED BY usage.tm_id;
+
+
+--
+-- Name: usage_usage_id_seq; Type: SEQUENCE; Schema: public; Owner: unihood
+--
+
+CREATE SEQUENCE usage_usage_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE usage_usage_id_seq OWNER TO unihood;
+
+--
+-- Name: usage_usage_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unihood
+--
+
+ALTER SEQUENCE usage_usage_id_seq OWNED BY usage.usage_id;
+
+
+--
+-- Name: enrolled_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY enrolled ALTER COLUMN enrolled_id SET DEFAULT nextval('enrolled_enrolled_id_seq'::regclass);
+
+
+--
+-- Name: student_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY enrolled ALTER COLUMN student_id SET DEFAULT nextval('enrolled_student_id_seq'::regclass);
+
+
+--
+-- Name: module_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY enrolled ALTER COLUMN module_id SET DEFAULT nextval('enrolled_module_id_seq'::regclass);
+
+
+--
+-- Name: lecturer_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY lecturer ALTER COLUMN lecturer_id SET DEFAULT nextval('lecturer_lecturer_id_seq'::regclass);
+
+
+--
+-- Name: lr_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY lecturer_rating ALTER COLUMN lr_id SET DEFAULT nextval('"lecturerRating_lr_id_seq"'::regclass);
+
+
+--
+-- Name: module_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY module ALTER COLUMN module_id SET DEFAULT nextval('module_module_id_seq'::regclass);
+
+
+--
+-- Name: mr_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY module_rating ALTER COLUMN mr_id SET DEFAULT nextval('"moduleRating_mr_id_seq"'::regclass);
+
+
+--
+-- Name: taught_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY taught ALTER COLUMN taught_id SET DEFAULT nextval('taught_taught_id_seq'::regclass);
+
+
+--
+-- Name: tm_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY teaching_method ALTER COLUMN tm_id SET DEFAULT nextval('"teachingMethod_tm_id_seq"'::regclass);
+
+
+--
+-- Name: lecturer_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY usage ALTER COLUMN lecturer_id SET DEFAULT nextval('usage_lecturer_id_seq'::regclass);
+
+
+--
+-- Name: tm_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY usage ALTER COLUMN tm_id SET DEFAULT nextval('usage_tm_id_seq'::regclass);
+
+
+--
+-- Name: usage_id; Type: DEFAULT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY usage ALTER COLUMN usage_id SET DEFAULT nextval('usage_usage_id_seq'::regclass);
+
+
+--
+-- Data for Name: enrolled; Type: TABLE DATA; Schema: public; Owner: unihood
+--
+
+COPY enrolled (enrolled_id, student_id, module_id) FROM stdin;
+1	1	2
+2	1	1
+3	2	2
+4	2	3
+5	1	3
+6	99	3
+7	99	4
+8	99	5
+9	99	7
+11	2	4
+12	99	1
+13	99	2
+\.
+
+
+--
+-- Name: enrolled_enrolled_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('enrolled_enrolled_id_seq', 13, true);
+
+
+--
+-- Name: enrolled_module_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('enrolled_module_id_seq', 1, false);
+
+
+--
+-- Name: enrolled_student_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('enrolled_student_id_seq', 1, false);
+
+
+--
+-- Data for Name: lecturer; Type: TABLE DATA; Schema: public; Owner: unihood
+--
+
+COPY lecturer (lecturer_id, lecturer_name, lecturer_address, lecturer_email, lecturer_phone) FROM stdin;
+3	Tim Knowitall	123 Unknown Street	tim.knowit@gmail.com	0756 293 5942
+4	Slartibartfast	Earth MK II	itsnotimportant@gmail.com	0745 999 9999
+5	Vince Noir	The Mighty Boosh	humancokecan@gmail.com	0794 304 8765
+6	Donald Trump	Hell	bigly@gmail.com	0217 637 8516
+7	Luke Skywalker	129 Force Road, Tatooine	farmboy@tatooine.com	0593 209 1023
+8	Paul Neve	dunno	p.neve@kingston.ac.uk	dunno
+\.
+
+
+--
+-- Name: lecturerRating_lr_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('"lecturerRating_lr_id_seq"', 4, true);
+
+
+--
+-- Name: lecturer_lecturer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('lecturer_lecturer_id_seq', 8, true);
+
+
+--
+-- Data for Name: lecturer_rating; Type: TABLE DATA; Schema: public; Owner: unihood
+--
+
+COPY lecturer_rating (lr_id, lr_value, lr_text, student_id, lecturer_id) FROM stdin;
+1	10	Awesome lecturer! Never been so interested in fashion before and this guy's hair is out of this world!	1	5
+2	10	Jedi are the protectors of peace, and I deduce that this guy is one of the best!	2	7
+3	10	Such a funny guy and very helpful!!	99	8
+\.
+
+
+--
+-- Data for Name: module; Type: TABLE DATA; Schema: public; Owner: unihood
+--
+
+COPY module (module_id, module_name, population, module_code) FROM stdin;
+1	Advanced Apple slicing	20	AP3400
+2	Fashion Analysis	50	FA3090
+3	Defining the Force	100	FO3930
+4	Individual Project	100	CI6300
+5	Advanced Databases and the Web	100	CI6230
+6	Internet Security	120	CI6240
+7	Programming III	70	CI6110
+\.
+
+
+--
+-- Name: moduleRating_mr_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('"moduleRating_mr_id_seq"', 4, true);
+
+
+--
+-- Name: module_module_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('module_module_id_seq', 7, true);
+
+
+--
+-- Data for Name: module_rating; Type: TABLE DATA; Schema: public; Owner: unihood
+--
+
+COPY module_rating (mr_id, mr_value, mr_text, module_id, student_id) FROM stdin;
+1	5	The most useful module I've ever taken! Now I can amaze people in the kitchen	1	1
+2	10	Amazing Jedi! The force is awesome	3	1
+3	10	This module is perfect as I'm hoping to become a Sith later on	3	99
+4	4	I fail to see what's so interesting about slicing apples..	1	2
+\.
+
+
+--
+-- Data for Name: student; Type: TABLE DATA; Schema: public; Owner: unihood
+--
+
+COPY student (student_id, student_fname, student_lname, student_email, student_phone, student_address) FROM stdin;
+2	Sherlock	Holmes	gameison@gmail.com	0748 310 2938	221b Baker St
+1	Bob	Jones	genericbob@gmail.com	0739 398 1029	18 Void St
+99	Daniel	Carnovale	daniel.carnovale@gmail.com	0749 302 3029	blah St
+\.
+
+
+--
+-- Data for Name: taught; Type: TABLE DATA; Schema: public; Owner: unihood
+--
+
+COPY taught (taught_id, module_id, lecturer_id) FROM stdin;
+1	1	3
+2	2	5
+3	3	7
+4	5	8
+5	1	8
+\.
+
+
+--
+-- Name: taught_taught_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('taught_taught_id_seq', 5, true);
+
+
+--
+-- Name: teachingMethod_tm_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('"teachingMethod_tm_id_seq"', 6, true);
+
+
+--
+-- Data for Name: teaching_method; Type: TABLE DATA; Schema: public; Owner: unihood
+--
+
+COPY teaching_method (tm_id, tm_name, tm_avg_rating) FROM stdin;
+3	Slides and Videos	6
+4	Slides and Examples	8
+6	Sorcery	10
+1	Slides Only	3
+2	Videos Only	7
+5	Videos and Examples	9
+\.
+
+
+--
+-- Data for Name: usage; Type: TABLE DATA; Schema: public; Owner: unihood
+--
+
+COPY usage (lecturer_id, tm_id, usage_id) FROM stdin;
+3	3	1
+4	2	2
+5	3	3
+7	6	4
+8	5	5
+8	6	6
+5	4	7
+\.
+
+
+--
+-- Name: usage_lecturer_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('usage_lecturer_id_seq', 1, false);
+
+
+--
+-- Name: usage_tm_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('usage_tm_id_seq', 1, false);
+
+
+--
+-- Name: usage_usage_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unihood
+--
+
+SELECT pg_catalog.setval('usage_usage_id_seq', 7, true);
+
+
+--
+-- Name: enrolled_pkey; Type: CONSTRAINT; Schema: public; Owner: unihood; Tablespace: 
+--
+
+ALTER TABLE ONLY enrolled
+    ADD CONSTRAINT enrolled_pkey PRIMARY KEY (enrolled_id);
+
+
+--
+-- Name: lecturerRating_pkey; Type: CONSTRAINT; Schema: public; Owner: unihood; Tablespace: 
+--
+
+ALTER TABLE ONLY lecturer_rating
+    ADD CONSTRAINT "lecturerRating_pkey" PRIMARY KEY (lr_id);
+
+
+--
+-- Name: lecturer_pkey; Type: CONSTRAINT; Schema: public; Owner: unihood; Tablespace: 
+--
+
+ALTER TABLE ONLY lecturer
+    ADD CONSTRAINT lecturer_pkey PRIMARY KEY (lecturer_id);
+
+
+--
+-- Name: moduleRating_pkey; Type: CONSTRAINT; Schema: public; Owner: unihood; Tablespace: 
+--
+
+ALTER TABLE ONLY module_rating
+    ADD CONSTRAINT "moduleRating_pkey" PRIMARY KEY (mr_id);
+
+
+--
+-- Name: module_pkey; Type: CONSTRAINT; Schema: public; Owner: unihood; Tablespace: 
+--
+
+ALTER TABLE ONLY module
+    ADD CONSTRAINT module_pkey PRIMARY KEY (module_id);
+
+
+--
+-- Name: student_pkey; Type: CONSTRAINT; Schema: public; Owner: unihood; Tablespace: 
+--
+
+ALTER TABLE ONLY student
+    ADD CONSTRAINT student_pkey PRIMARY KEY (student_id);
+
+
+--
+-- Name: taught_pkey; Type: CONSTRAINT; Schema: public; Owner: unihood; Tablespace: 
+--
+
+ALTER TABLE ONLY taught
+    ADD CONSTRAINT taught_pkey PRIMARY KEY (taught_id);
+
+
+--
+-- Name: teachingMethod_pkey; Type: CONSTRAINT; Schema: public; Owner: unihood; Tablespace: 
+--
+
+ALTER TABLE ONLY teaching_method
+    ADD CONSTRAINT "teachingMethod_pkey" PRIMARY KEY (tm_id);
+
+
+--
+-- Name: usage_id; Type: CONSTRAINT; Schema: public; Owner: unihood; Tablespace: 
+--
+
+ALTER TABLE ONLY usage
+    ADD CONSTRAINT usage_id PRIMARY KEY (usage_id);
+
+
+--
+-- Name: lecturer; Type: FK CONSTRAINT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY lecturer_rating
+    ADD CONSTRAINT lecturer FOREIGN KEY (lecturer_id) REFERENCES lecturer(lecturer_id);
+
+
+--
+-- Name: lecturer; Type: FK CONSTRAINT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY usage
+    ADD CONSTRAINT lecturer FOREIGN KEY (lecturer_id) REFERENCES lecturer(lecturer_id);
+
+
+--
+-- Name: lecturer_id; Type: FK CONSTRAINT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY taught
+    ADD CONSTRAINT lecturer_id FOREIGN KEY (lecturer_id) REFERENCES lecturer(lecturer_id);
+
+
+--
+-- Name: module; Type: FK CONSTRAINT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY module_rating
+    ADD CONSTRAINT module FOREIGN KEY (module_id) REFERENCES module(module_id);
+
+
+--
+-- Name: module_id; Type: FK CONSTRAINT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY taught
+    ADD CONSTRAINT module_id FOREIGN KEY (module_id) REFERENCES module(module_id);
+
+
+--
+-- Name: module_id; Type: FK CONSTRAINT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY enrolled
+    ADD CONSTRAINT module_id FOREIGN KEY (module_id) REFERENCES module(module_id);
+
+
+--
+-- Name: student; Type: FK CONSTRAINT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY lecturer_rating
+    ADD CONSTRAINT student FOREIGN KEY (student_id) REFERENCES student(student_id);
+
+
+--
+-- Name: student; Type: FK CONSTRAINT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY module_rating
+    ADD CONSTRAINT student FOREIGN KEY (student_id) REFERENCES student(student_id);
+
+
+--
+-- Name: student_id; Type: FK CONSTRAINT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY enrolled
+    ADD CONSTRAINT student_id FOREIGN KEY (student_id) REFERENCES student(student_id);
+
+
+--
+-- Name: teachingMethod; Type: FK CONSTRAINT; Schema: public; Owner: unihood
+--
+
+ALTER TABLE ONLY usage
+    ADD CONSTRAINT "teachingMethod" FOREIGN KEY (tm_id) REFERENCES teaching_method(tm_id);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
