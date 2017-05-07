@@ -5,6 +5,7 @@ use Mojo::Base 'Mojolicious';
 sub startup {
   my $self = shift;
 
+  $self->plugin( 'StaticLog' );
   $self->plugin( Tables => {model_class => 'UnihoodDB'} );
 
   # Router
